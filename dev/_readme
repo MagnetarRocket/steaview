@@ -1,0 +1,12 @@
+This is the dev(ice) directory, the following prefixes are used for files:
+
+fb : framebuffer, access to the local system framebuffer framework.
+
+pfb: pesudo-framebuffer, while it acts like a framebuffer, it however 
+	is more of a wrapper for the underlining graphics subsystems of target platform.
+
+	A good example would be OSX.
+
+mouse: rawer mouse accesss.
+
+_readme: this readme file.

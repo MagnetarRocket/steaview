@@ -1,13 +1,32 @@
 # starview
 A simple no-frills windowing + management enviroment influnced by SunView.
 
+Starview is unsually light, requiring about #MB/#KB of RAM, it can run on:
+
+	* Sega dreamcast
+
+	* AtariSTE
+
+	* Amiga 3000UX +
+
+	* IBM-PC compatible with a i386 and at least a hercules monochrome
+	graphics card.
+
+	* Sun 3/50
+
+	* DEC VAXStation
+
+	* And anything above the specs of those machines. In short- it can run
+	on a machine consitered a patato in today's specs.
+
 ## Usage
 starview is simply started via the command `starview`. However, due to
 partly a choice of not using conventions expected of today's GUI's and
 due to design choices to ensure a unusally small size (target platforms 
 do include several m68k machines, dreamcast, acorn RISC-PC, late-model 
 VAX systems, i386 +, m88k, & possibly all of the total systems that the
-current BSD's support that do support graphics & have at least 10MB), starview may not handle 
+current BSD's support that do support graphics & have at least 10MB(expected
+base OS usage is roughly 5ish) ), starview may not handle 
 like you'd expect it to:
 
 	* what would be commonly called a window is a frame here.
@@ -75,6 +94,8 @@ The applications found in with a standard install of starview are:
 	* heat: CPU usage history, GPU usage history, RAM usage history, 
 	storage usage history, network usage history, & heat indicator.
 
+	* VTime: On-system clock and date.
+
 	* runlist: active applications list.
 
 	* scorch: application terminator akin to xkill.
@@ -97,21 +118,40 @@ Avaible options are:
 	* RootFrameFg(optional on color systems): Foreground color seprate from the 
 	main foreground color.
 
-	* ShadowBg:
+	* ShadowBg(optional on color systems): Background color seprate from the 
+	main background color.
 
-	* ShadowFg:	
+	* ShadowFg(optional on color systems): Foreground color seprate from the 
+	main foreground color.
 
-	* Inverted: Inverts the background and foreground colors.
+	* SelectBg:Background color seprate from the 
+	main background color.
 
-	* RootFramePixmap: The pixmap to use with the root-frame.
+	* SelectFg:Foreground color seprate from the 
+	main foreground color.
 
-	* ShadowPixmap: the pixmap for the shadows to use.
+	* inverted: Inverts the background and foreground colors.
+
+	* rootFramePixmap: The pixmap to use with the root-frame.
+
+	* shadowPixmap: the pixmap for the shadows to use.
 
 	* titleFont: Font used for titlebars.
 
-	* appFont: Default font used for applications & menus.
+	* titleJustify: State where the titlebar text should be, options are:
 
-	*
+		-left
+
+		-center
+
+		-right
+
+	Default is `left`.
+
+	* appFont: Default font used for applications, hover-context, & menus.
+
+	* hideAction: Hide the action button that's usally visable on the lefthand
+	side of the titlebar.
 
 	* action button(can be excluded from view):
 
@@ -130,6 +170,9 @@ Avaible options are:
 		*function1: lower
 
 		*function2: arise
+	
+	*quickExit: Usually meant to be a shortcut to quickly exit starview without asking, default
+	keyboard shortcut is `Ctrl+alt+esc`.
 
 ## Developing for starview
 As said with using starview, devloping apps for it is not what you had encounted
@@ -191,6 +234,8 @@ you are using built in functions:
 
 			-rows overflowing into coloumns 'flowrow'
 
+			-coloumns overflowing into rows 'flowcoloumn'
+
 		if desired, the view-area can be set to have item-wraping by the dev or
 		the user.
 
@@ -202,9 +247,60 @@ you are using built in functions:
 			-slider size
 
 		* menu: Is much like the modern expected behavior of a menu. can be summoned
-		by right mouse button clicks or widget buttons.
+		by right mouse button clicks or widget buttons. Always at the top of the
+		z-order. Menu subwidgets include:
+		
+			-menu: Menus can contain other menus.
+			
+			-action: A simple button, like any button it can be disabled.
 
-		* tables:
+			-toggle: 
+
+		* tables: akin to HTML layout tables, can have a border or said border to be
+		invisable. Has the following options:
+
+			-coloumns
+
+			-rows
+
+			-rows overflowing into coloumns 'flowrow'
+
+			-coloumns overflowing into rows 'flowcoloumn'
+
+			-rows overflowing into a button 'row_to1'
+
+			-coloumns overflowing into a button 'coloumn_to1'
+
+			* toggle: a button or series of buttons
+
+	* There are also two main types of frames avaible:
+	
+		* normal: the normal frame type.
+
+		* widgets: widget frames, these can be told to go at the topmost 
+		or bottommost z-order as needed, has the following subtypes:
+
+			-dialog windows: stuck +1 to the summoning parent app's z-order, 
+			will hold parent app's input until delt with.
 
 ## Modfying & compiling starview
 
+Starview never is distrubited in a fat binary, the user or sysadmin is expected
+to compile Starview before deployment. The following compile flags are given:
+
+	* `_MONObit`: Use 1-bit color. disables all color usage & options.
+
+	* `_no-selectHue`:Do not make selected items unique in hue choice
+	
+	*`_no-RootHue`:Do not make root-frame unique in hue choice
+
+	*`_noShadowHue`:Do not make shadows unique in hue choice, ignored if shadows
+	are disabled.
+
+	*`_no-InvSelectFrames`: Do not invert hues on active frame.
+
+	*`_no-InactiveOutline`: Do not draw SunView-esque outlines on the windows.
+
+	*`_no-Shadows`: Do not draw shadows.
+
+	*`_no-Thrust`: Do not draw amiga-esque thrust buttons in the titlebar.
