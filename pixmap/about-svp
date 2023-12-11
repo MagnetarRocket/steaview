@@ -1,0 +1,9 @@
+the .svp format is a striped down version of the .xpm format, while it shares a large amount of the synthax, the amount of colors it supports is just down to three hard-coded ones:
+
+*'x'none
+
+*'w'white
+
+*'b'black
+
+having a "none" color option gives svp no requirements for mask images.
