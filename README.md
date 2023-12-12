@@ -1,6 +1,6 @@
 # starview
 
-![/doc/Starview.png](Screenshot of starview)
+![screenshot of starview](/doc/Starview.png)
 
 A simple no-frills windowing + management enviroment influnced by SunView.
 
