@@ -64,6 +64,9 @@ like you'd expect it to:
 	1-bit graphics using systems. Implemtations on color-using systems can have the
 	widgets use their own background & foreground colors as needed.
 
+Also starview requires at least a 2-button mouse. While it can be configured to use
+more then 2-buttons, the deafults assume a 2-button one. In the event that there are no 2-button mice used with the system (eg-m68k color macs)- alt/option + click emulates a 2nd button.
+
 ### Included apps
 
 The applications found in with a standard install of starview are:
@@ -307,3 +310,6 @@ to compile Starview before deployment. The following compile flags are given:
 	*`_no-Shadows`: Do not draw shadows.
 
 	*`_no-Thrust`: Do not draw amiga-esque thrust buttons in the titlebar.
+
+	*`_UseAltKey`: Use the alt/option key in condunction with mouse button1
+	to emulate a right button click.

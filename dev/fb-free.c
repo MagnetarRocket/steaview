@@ -1,0 +1,1 @@
+// FreeBSD related framebuffer hooks

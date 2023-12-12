@@ -1,0 +1,1 @@
+// OpenBSD related frambuffer hooks
