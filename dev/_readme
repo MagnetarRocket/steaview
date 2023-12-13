@@ -7,7 +7,7 @@ pfb: pesudo-framebuffer, while it acts like a framebuffer, it however
 
 	A good example would be OSX.
 
-mouse: rawer mouse accesss. in /mouse, mouse layers use "m-" as a prefix.
+mouse: somewhat direct mouse accesss via OS drivers hooked to by layers, said layers are system specific. In /mouse, mouse layers use "m-" as a prefix; in the case of a "puesdo" layer, it will have the "pm-" prefix.
 
 _readme: this readme file.
 

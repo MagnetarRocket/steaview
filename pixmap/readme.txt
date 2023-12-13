@@ -1,0 +1,1 @@
+This is the pixmaps directory, master copies of the files are in ".xpm" as this is what svp is patterned after.
