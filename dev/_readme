@@ -1,4 +1,4 @@
-This is the dev(ice) directory, the following prefixes are used for files:
+-This is the dev(ice) directory, the following prefixes are used for files:
 
 fb : framebuffer, access to the local system framebuffer framework.
 
@@ -7,6 +7,21 @@ pfb: pesudo-framebuffer, while it acts like a framebuffer, it however
 
 	A good example would be OSX.
 
-mouse: rawer mouse accesss.
+mouse: rawer mouse accesss. in /mouse, mouse layers use "m-" as a prefix.
 
 _readme: this readme file.
+
+-postfix clarifcation:
+
+dragon: dragonflyBSD, might be added in later on.
+
+free: FreeBSD.
+
+open: openBSD
+
+net: netBSD
+
+sunOS: illumos
+
+OSX: Mac OS (X), support for it is put on hold for now, will have active support when others request it.
+
