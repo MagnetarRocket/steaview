@@ -312,7 +312,7 @@ are disabled.
 *`_no-Thrust`: Do not draw amiga-esque thrust buttons in the titlebar.
 
 *`_UseAltKey`: Use the alt/option key in condunction with mouse button1
-	to emulate a right button click.
+to emulate a right button click.
 
 In order to have starview compile without make or the comilier complaining, one 
 has to use the platform flags:
