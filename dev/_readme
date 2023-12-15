@@ -9,6 +9,8 @@ pfb: pesudo-framebuffer, while it acts like a framebuffer, it however
 
 mouse: somewhat direct mouse accesss via OS drivers hooked to by layers, said layers are system specific. In /mouse, mouse layers use "m-" as a prefix; in the case of a "puesdo" layer, it will have the "pm-" prefix.
 
+kb: keyboard, usualy unix has a unified way,
+
 _readme: this readme file.
 
 -postfix clarifcation:
@@ -25,3 +27,4 @@ sunOS: illumos
 
 OSX: Mac OS (X), support for it is put on hold for now, will have active support when others request it.
 
+internal: internal to starview, programs relying on these aren't expected to have much problems being ported due to starview handling much of that itself.
