@@ -1,0 +1,9 @@
+the .avp format is a simplifed version of the .xpm format (Version 3), while it shares a large amount of the synthax, it's a little more human readable and editable(when needed), it has the following synthax of:
+
+"1"= True, foreground hue
+
+"0"= False, background hue
+
+" "= None, transparent pixel
+
+Starview applications must be compiled with a .avp icon as part of the program headder.
