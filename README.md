@@ -65,7 +65,7 @@ are indicated via a outline.
 widgets use their own background & foreground colors as needed.
 
 Also starview requires at least a 2-button mouse. While it can be configured to use
-more then 2-buttons, the deafults assume a 2-button one. In the event that there are no 2-button mice used with the system (eg-m68k color macs)- alt/option + click emulates a 2nd button.
+more then 2-buttons (for instance on systems of where a 3-button or more mouse is natual), the deafults assume a 2-button one. In the event that there are no 2-button mice used with the system (eg-m68k color macs)- alt/option + click emulates a 2nd button.
 
 ### Included apps
 
@@ -85,7 +85,7 @@ The applications found in with a standard install of starview are:
 
 * rake: simple music tracker on systems that support sound.
 
-* pig: I/O pin peeker & poker on systems with user-accesable GPIO pins.
+* pig: I/O pin peeker & poker on systems with user-accesable GPIO pins (eg- the raspberry Pi & alike systems).
 
 * hyperbole: general purpose visual markup viewer, includes support for:
 
@@ -110,7 +110,7 @@ storage usage history, network usage history, & heat indicator.
 
 ## Configuration
 Starview is configured in a manner not unlike sunview, in using a `.starview` file found
-in the user's directory that has a mostly simular synthex that's easier to remember.
+in the user's directory that has a mostly simular synthex to X11 that's easier to remember.
 
 Avaible options are:
 
