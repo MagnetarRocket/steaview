@@ -8,7 +8,7 @@ Starview is unsually light, requiring about #MB/#KB of RAM, it can run on:
 
 * Sega dreamcast
 
-* AtariSTE
+* AtariST Falcon
 
 * Amiga 3000UX +
 
